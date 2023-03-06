@@ -1,0 +1,38 @@
+
+import java.util.*;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int H,M;
+		
+		H = sc.nextInt();
+		M = sc.nextInt();
+		sc.close();
+		
+
+		
+		if(M < 45) {
+			
+			H--; //시간 1 감소 
+			M = 60 - (45 - M);
+			
+			if(H < 0){
+				H = 23;
+			}
+			
+			System.out.print(H + " " + M);
+			
+		} else {
+			
+			System.out.print(H+ " " + (M-45));
+		}
+		
+		
+	}
+
+
+}
